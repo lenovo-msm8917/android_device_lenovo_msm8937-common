@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/lenovo/tb-common
+COMMON_PATH := device/lenovo/msm8937-common
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8937
@@ -224,4 +224,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/lenovo/tb-common/BoardConfigVendor.mk
+include vendor/lenovo/msm8937-common/BoardConfigVendor.mk
