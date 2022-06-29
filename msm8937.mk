@@ -379,4 +379,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Call the proprietary setup
-$(call inherit-product, vendor/lenovo/tb-common/tb-common-vendor.mk)
+$(call inherit-product, vendor/lenovo/msm8937-common/msm8937-common-vendor.mk)
