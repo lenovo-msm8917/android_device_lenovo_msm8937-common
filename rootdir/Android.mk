@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-# files that live under device/lenovo/tb-common/rootdir
+# files that live under device/lenovo/msm8937-common/rootdir
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := fstab.qcom
@@ -27,7 +27,7 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
-# files that live under device/lenovo/tb-common/rootdir/etc
+# files that live under device/lenovo/msm8937-common/rootdir/etc
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.early_boot.sh
