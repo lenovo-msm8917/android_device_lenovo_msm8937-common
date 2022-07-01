@@ -116,18 +116,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

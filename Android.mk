@@ -1,5 +1,5 @@
 #
-# Copyright 2019 The LineageOS Project
+# Copyright 2019-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter TB8703 TBX704 TB8704 TB8504 TBX304,$(TARGET_DEVICE)),)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 

@@ -22,7 +22,13 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
+
+# Broken rules
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -176,29 +182,20 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Power
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_VARIANT := qcom
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/fstab.qcom
 
 # SELinux
-SELINUX_IGNORE_NEVERALLOWS := true
-
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy
-
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    $(COMMON_PATH)/sepolicy/public
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    $(COMMON_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := false
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
